@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- <base href="/"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <!-- <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.13/system.js">
+  </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.0/system.js"></script>
+    <title>Reactive Snake</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <canvas  height="400" width="400"></canvas> -->
+    <script>
+        SystemJS.config({
+            baseURL: "/",
+            packages: {
+                "/": { defaultExtension: "js" }
+            },
+
+            map:{
+                rxjs: 'node_modules/rxjs'
+            }
+        });
+        System.import("./js/main.js");
+    </script>
+    <!-- <script type="text/javascript">
+        SystemJS.import('./js/main.js');
+      </script> -->
+</body>
+
+</html>
